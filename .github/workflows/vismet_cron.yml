@@ -28,12 +28,12 @@ jobs:
         playwright install-deps
 
     - name: Ejecutar Script de Extraccion
-      run: python scrapper_vismet_acumulado_2026.py
+      run: python scrapper_VisMet_Bypass.py
 
     - name: Guardar CSVs Actualizados en el Repositorio
       run: |
         git config --global user.name "GitHub Action Bot"
         git config --global user.email "action@github.com"
-        git add origen_*.csv
+        git add origen_vismet_*.csv
         git commit -m "Actualizacion automatica VisMet" || exit 0
         git push

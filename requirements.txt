@@ -1,5 +1,3 @@
-Plaintext
-
 pandas
 playwright
 requests

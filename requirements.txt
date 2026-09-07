@@ -1,5 +1,0 @@
-Plaintext
-
-pandas
-playwright
-requests

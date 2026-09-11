@@ -33,14 +33,6 @@ jobs:
     - name: Ejecutar Script de Extraccion
       run: python scrapper_VisMet_Bypass.py
 
-    - name: Subir CSV a OneDrive
-      env:
-        MS_CLIENT_ID: ${{ secrets.MS_CLIENT_ID }}
-        MS_CLIENT_SECRET: ${{ secrets.MS_CLIENT_SECRET }}
-        MS_TENANT_ID: ${{ secrets.MS_TENANT_ID }}
-        MS_USER_EMAIL: ${{ secrets.MS_USER_EMAIL }}
-      run: python subir_onedrive.py
-      
     - name: Guardar CSVs Actualizados en el Repositorio
       run: |
         git config --global user.name "GitHub Action Bot"
@@ -48,3 +40,4 @@ jobs:
         git add origen_vismet_*.csv
         git commit -m "Actualizacion automatica VisMet" || exit 0
         git push
+   
